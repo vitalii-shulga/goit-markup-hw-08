@@ -1,0 +1,21 @@
+:root {
+  //   fonts
+  --font-main: 'Roboto', sans-serif;
+  --font-logo: 'Raleway', sans-serif;
+
+  // colors
+  --txt-main-color: #757575;
+  --txt-title-color: #212121;
+  --txt-dark-bg-color: #ffffff;
+  --bg-main-color: #ffffff;
+  --bg-dark-color: #2f303a;
+  --bg-gray-color: #f5f4fa;
+  --icon-color: #afb1b8;
+  --accent-color: #2196f3;
+  --second-accent-color: #188ce8;
+  --border-color: #eeeeee;
+
+  //   animation
+  --time: 250ms;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

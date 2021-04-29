@@ -1,0 +1,19 @@
+.address__list {
+  @extend %list;
+}
+
+.address__item {
+  color: rgba(255, 255, 255, 0.6);
+
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &--dark-bg {
+    color: var(--txt-dark-bg-color);
+  }
+}
+
+.address__link {
+  @extend %link;
+}

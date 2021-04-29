@@ -1,0 +1,41 @@
+.clients__list {
+  @extend %list;
+}
+
+.clients__item {
+  height: 90px;
+
+  flex-basis: calc((100% - 30px * 6) / 6);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.clients__link {
+  @extend %link;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  transition: border-color var(--time) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
+}
+
+.clients__icon {
+  fill: var(--icon-color);
+
+  transition: fill var(--time) var(--timing-function);
+
+  .clients__link:hover &,
+  .clients__link:focus & {
+    fill: var(--accent-color);
+  }
+}
