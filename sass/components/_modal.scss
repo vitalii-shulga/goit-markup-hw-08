@@ -5,6 +5,7 @@
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.2);
+  z-index: 5;
 
   opacity: 1;
   transition: opacity var(--time) var(--timing-function);
@@ -20,7 +21,7 @@
   top: 50%;
   left: 50%;
 
-  width: 528px;
+  width: 450px;
   padding: 40px;
   background-color: var(--bg-main-color);
   border-radius: 4px;
@@ -31,5 +32,9 @@
 
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
   }
 }

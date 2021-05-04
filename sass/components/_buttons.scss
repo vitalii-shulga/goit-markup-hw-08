@@ -6,6 +6,8 @@
   justify-content: center;
   width: 200px;
   height: 50px;
+  border: none;
+  border-radius: 4px;
   background-color: var(--accent-color);
 
   font-weight: 700;
@@ -27,6 +29,8 @@
   @extend %button;
 
   padding: 6px 22px;
+  border: none;
+  border-radius: 4px;
   background-color: var(--bg-gray-color);
 
   font-weight: 500;
@@ -46,14 +50,14 @@
 }
 
 .btn-close {
+  @extend %button;
+
   width: 30px;
   height: 30px;
-  padding: 0;
+
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: inherit;
-  outline: none;
-  cursor: pointer;
 }
 
 .btn-close__icon {
@@ -69,5 +73,45 @@
   .btn-close:focus & {
     fill: var(--accent-color);
     transform: scale(1.2);
+  }
+}
+
+.btn-menu {
+  @extend %button;
+
+  border: none;
+  background-color: inherit;
+  z-index: 3;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.btn-menu__icon {
+  margin: auto;
+  fill: var(--txt-title-color);
+
+  transition: fill var(--time) var(--timing-function);
+
+  .btn-menu:hover &,
+  .btn-menu:focus & {
+    fill: var(--accent-color);
+  }
+}
+
+.btn-menu__icon--open {
+  display: block;
+
+  .btn-menu.is-open & {
+    display: none;
+  }
+}
+
+.btn-menu__icon--close {
+  display: none;
+
+  .btn-menu.is-open & {
+    display: block;
   }
 }

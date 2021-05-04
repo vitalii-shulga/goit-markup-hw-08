@@ -14,38 +14,60 @@
     <!-- page header -->
     <header class="page-header">
       <div class="page-header__container container">
-        <nav class="page-nav">
-          <a class="logo page-header__logo" href="./index.html">Web<span class="logo__sec-part">Studio</span></a>
-          <ul class="menu">
-            <li class="menu__item">
-              <a class="menu__link" href="./index.html">Студия</a>
+        <a class="page-header__logo logo" href="./index.html">Web<span class="logo__sec-part">Studio</span></a>
+        <div class="page-nav" id="menu-container" data-menu>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="./index.html">Студия</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link current" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contact">
+            <li class="contact__item">
+              <a class="contact__link" href="mailto:info@devstudio.com">
+                <svg class="contact__icon" width="16" height="12">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
-            <li class="menu__item">
-              <a class="menu__link current" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="">Контакты</a>
+            <li class="contact__item">
+              <a class="contact__link" href="tel:+380961111111">
+                <svg class="contact__icon" width="10" height="16">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
             </li>
           </ul>
-        </nav>
-        <ul class="contact">
-          <li class="contact__item">
-            <a class="contact__link" href="mailto:info@devstudio.com">
-              <svg class="contact__icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contact__item">
-            <a class="contact__link" href="tel:+380961111111">
-              <svg class="contact__icon" width="10" height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+          <ul class="header-social">
+            <li class="header-social__item">
+              <a class="header-social__link" href="" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </li>
+            <li class="header-social__item">
+              <a class="header-social__link" href="" target="_blank" rel="noopener noreferrer">Twitter</a>
+            </li>
+            <li class="header-social__item">
+              <a class="header-social__link" href="" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </li>
+            <li class="header-social__item">
+              <a class="header-social__link" href="" target="_blank" rel="noopener noreferrer">Linkedin</a>
+            </li>
+          </ul>
+        </div>
+        <button class="btn-menu" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+          <svg width="40" height="40" aria-label="открыть мобильное меню">
+            <use class="btn-menu__icon btn-menu__icon--open" href="./images/icons.svg#icon-menu-open"></use>
+            <use class="btn-menu__icon btn-menu__icon--close" href="./images/icons.svg#icon-menu-close"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -74,7 +96,7 @@
           </ul>
 
           <!--portfolio-->
-          <ul class="portfolio grid">
+          <ul class="portfolio">
             <li class="portfolio__item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__img">
@@ -287,5 +309,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
