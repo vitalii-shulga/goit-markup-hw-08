@@ -19,16 +19,18 @@
 
 .menu__link {
   @extend %link;
-  font-size: 40px;
-  line-height: 1.175;
+
   color: var(--txt-title-color);
+
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+  }
 
   @media screen and (min-width: 768px) {
     position: relative;
     padding-top: 32px;
-    padding-bottom: 31px;
+    padding-bottom: 32px;
     font-size: 14px;
-    line-height: 1.17;
   }
 }
 
@@ -45,8 +47,10 @@
   }
 }
 
-.menu__item:not(:last-child) {
-  margin-bottom: 32px;
+@media screen and (max-width: 767px) {
+  .menu__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
 }
 
 @media screen and (min-width: 768px) {

@@ -1,5 +1,11 @@
 .address__list {
   @extend %list;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .address__item {
