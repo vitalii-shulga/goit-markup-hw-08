@@ -1069,7 +1069,7 @@ body {
 @media screen and (max-width: 1199px) {
   .subscribe__input {
     margin-bottom: 20px;
-    width: 450px;
+    width: 100%;
   }
 }
 
