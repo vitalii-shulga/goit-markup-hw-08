@@ -1,18 +1,14 @@
 .subscribe {
-  display: inline-flex;
+  display: flex;
+  width: inherit;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
     flex-direction: column;
     align-items: center;
-    widows: 100px;
   }
 }
 
 .subscribe__input {
-  // flex: 1;
-  // margin-right: 12px;
-  // min-width: 200px;
-
   height: 50px;
   padding-left: 16px;
   padding-right: 16px;
@@ -31,8 +27,14 @@
     color: rgba(255, 255, 255, 0.6);
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
     margin-bottom: 20px;
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex: 1;
+    margin-right: 12px;
   }
 }
 

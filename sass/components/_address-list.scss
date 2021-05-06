@@ -1,7 +1,7 @@
 .address__list {
   @extend %list;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,12 +11,16 @@
 .address__item {
   color: rgba(255, 255, 255, 0.6);
 
-  &:not(:last-child) {
-    margin-bottom: 9px;
-  }
-
   &--dark-bg {
     color: var(--txt-dark-bg-color);
+  }
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 8px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
   }
 }
 

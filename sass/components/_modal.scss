@@ -35,8 +35,8 @@
   }
 
   @media screen and (max-width: 1199px) {
-    width: 100%;
+    width: calc(100% - 30px);
+    min-width: 330px;
     max-width: 450px;
-    margin: 15px;
   }
 }
