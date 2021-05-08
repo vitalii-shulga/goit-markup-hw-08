@@ -574,7 +574,7 @@ body.modal-open {
 
 @media screen and (max-width: 767.9px) {
   .menu {
-    margin-bottom: calc(100vh - 490px);
+    margin-bottom: 306px;
   }
 }
 
@@ -851,8 +851,6 @@ body.modal-open {
   z-index: 5;
   opacity: 1;
   transition: opacity var(--time) var(--timing-function);
-  padding-left: 15px;
-  padding-right: 15px;
   overflow-y: scroll;
 }
 
@@ -862,13 +860,56 @@ body.modal-open {
 }
 
 .modal {
-  position: relative;
+  position: absolute;
+  width: calc(100% - 30px);
   padding: 40px;
-  max-width: 450px;
   background-color: var(--bg-main-color);
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform var(--time) var(--timing-function);
+}
+
+@media screen and (max-width: 399.9px) {
+  .modal {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .modal {
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-height: 640px) {
+  .modal {
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%, 0) scale(1);
+  }
 }
 
 @media screen and (max-width: 767.9px) {
@@ -880,36 +921,6 @@ body.modal-open {
 @media screen and (min-width: 768px) {
   .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0.8);
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .modal {
-    width: 450px;
-  }
-}
-
-@media screen and (max-width: 767.9px) {
-  .modal {
-    position: absolute;
-    top: 1%;
-    left: 50%;
-    transform: translate(-50%, 0) scale(1);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .modal {
-    width: 528px;
   }
 }
 
@@ -1052,6 +1063,7 @@ body.modal-open {
   background-image: url(../images/icons/check.svg);
   background-size: contain;
   background-origin: border-box;
+  background-repeat: no-repeat;
 }
 
 .form__btn-submit {
@@ -1180,7 +1192,6 @@ body.modal-open {
     position: absolute;
     top: 0;
     left: 0;
-    min-height: 100vh;
     flex-direction: column;
     justify-content: space-evenly;
     display: none;

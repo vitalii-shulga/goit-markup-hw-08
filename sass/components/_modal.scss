@@ -10,8 +10,6 @@
   opacity: 1;
   transition: opacity var(--time) var(--timing-function);
 
-  padding-left: 15px;
-  padding-right: 15px;
   overflow-y: scroll;
 }
 
@@ -21,19 +19,48 @@
 }
 
 .modal {
-  position: relative;
+  position: absolute;
 
-  // margin: auto;
+  width: calc(100% - 30px);
   padding: 40px;
-  max-width: 450px;
   background-color: var(--bg-main-color);
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 
   transition: transform var(--time) var(--timing-function);
 
+  @media screen and (max-width: 399.9px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
+
+  @media screen and (max-width: 767.9px) {
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%, 0) scale(1);
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  @media screen and (min-width: 768px) and (max-height: 640px) {
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%, 0) scale(1);
+  }
+
   .backdrop.is-hidden & {
-    // transform: translate(-50%, -50%) scale(0.8);
     @media screen and (max-width: 767.9px) {
       transform: translate(-50%, 0) scale(0.8);
     }
@@ -41,39 +68,5 @@
     @media screen and (min-width: 768px) {
       transform: translate(-50%, -50%) scale(0.8);
     }
-  }
-
-  // @media screen and (max-width: 399.9px) {
-  //   padding-left: 20px;
-  //   padding-right: 20px;
-  // }
-
-  @media screen and (min-width: 480px) {
-    width: 450px;
-  }
-
-  @media screen and (max-width: 767.9px) {
-    position: absolute;
-    top: 1%;
-    left: 50%;
-    transform: translate(-50%, 0) scale(1);
-  }
-
-  @media screen and (min-width: 768px) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
-  // @media screen and (min-width: 768px) and (min-height: 640px) {
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%) scale(1);
-  // }
-
-  @media screen and (min-width: 1200px) {
-    width: 528px;
   }
 }
