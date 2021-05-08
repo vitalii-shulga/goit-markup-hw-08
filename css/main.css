@@ -856,7 +856,7 @@ body.modal-open {
   z-index: 5;
   opacity: 1;
   transition: opacity var(--time) var(--timing-function);
-  padding: 15px 15px 15px 15px;
+  padding: 15px;
   overflow-y: scroll;
 }
 
@@ -867,6 +867,7 @@ body.modal-open {
 
 .modal {
   position: relative;
+  margin: auto;
   padding: 40px;
   background-color: var(--bg-main-color);
   border-radius: 4px;
@@ -878,21 +879,18 @@ body.modal-open {
   transform: translate(-50%, -50%) scale(0.8);
 }
 
-@media screen and (max-width: 767.9px) {
-  .modal {
-    max-width: 450px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (min-height: 640px) {
   .modal {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    width: 450px;
+  }
+}
+
+@media screen and (max-width: 1199.9px) {
+  .modal {
+    max-width: 450px;
   }
 }
 
