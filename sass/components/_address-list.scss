@@ -1,7 +1,7 @@
 .address__list {
   @extend %list;
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1199.9px) {
     display: flex;
     flex-direction: column;
     align-items: center;

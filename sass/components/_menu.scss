@@ -1,5 +1,5 @@
 .menu {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.9px) {
     margin-bottom: 302px;
   }
 
@@ -22,7 +22,7 @@
 
   color: var(--txt-title-color);
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.9px) {
     font-size: 40px;
   }
 
@@ -47,7 +47,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.9px) {
   .menu__item:not(:last-child) {
     margin-bottom: 32px;
   }

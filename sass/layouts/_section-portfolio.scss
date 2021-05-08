@@ -10,7 +10,6 @@
 
 .portfolio__item {
   position: relative;
-  width: 450px;
   border-bottom: 1px solid var(--border-color);
   transition: box-shadow var(--time) var(--timing-function);
 
@@ -29,7 +28,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.9px) {
   .portfolio__item:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -57,6 +56,8 @@
 
 .portfolio__link {
   @extend %link;
+  display: block;
+  height: 100%;
 }
 
 .portfolio__img {
@@ -73,8 +74,8 @@
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100%;
-  padding: 24px;
+  min-height: 100%;
+  padding: 0 24px;
   background-color: rgba(33, 150, 243, 0.9);
 
   font-size: 18px;
@@ -88,13 +89,19 @@
   .portfolio__item:focus & {
     transform: translatey(-100%);
   }
+
+  @media screen and (max-width: 359.9px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 360px) and (max-width: 399.9px) {
+    font-size: 16px;
+  }
 }
 
 .portfolio__desc {
   padding: 20px 24px;
   background-color: var(--bg-main-color);
-  // border: 1px solid var(--border-color);
-  // border-top: none;
 
   font-size: 16px;
   line-height: 1.87;

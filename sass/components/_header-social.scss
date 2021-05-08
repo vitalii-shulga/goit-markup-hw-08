@@ -2,6 +2,7 @@
   @extend %list;
 
   display: inline-flex;
+  flex-wrap: wrap;
 
   font-weight: 500;
   font-size: 18px;

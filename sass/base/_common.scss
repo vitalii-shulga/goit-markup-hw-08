@@ -40,3 +40,7 @@ body {
   letter-spacing: 0.03em;
   color: var(--txt-main-color);
 }
+
+body.modal-open {
+  overflow: hidden;
+}
