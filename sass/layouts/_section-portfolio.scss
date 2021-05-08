@@ -90,11 +90,7 @@
     transform: translatey(-100%);
   }
 
-  @media screen and (max-width: 359.9px) {
-    font-size: 14px;
-  }
-
-  @media screen and (min-width: 360px) and (max-width: 399.9px) {
+  @media screen and (max-width: 399.9px) {
     font-size: 16px;
   }
 }

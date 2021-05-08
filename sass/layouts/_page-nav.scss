@@ -7,7 +7,9 @@
     top: 0;
     left: 0;
 
+    min-height: 100vh;
     flex-direction: column;
+    justify-content: space-evenly;
 
     display: none;
     padding: 48px 40px;
