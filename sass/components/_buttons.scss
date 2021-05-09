@@ -81,7 +81,17 @@
 
   border: none;
   background-color: inherit;
-  z-index: 3;
+  z-index: 2;
+
+  &.is-open {
+    position: fixed;
+    top: 10px;
+    right: calc((100vw - 450px) / 2);
+
+    @media screen and (max-width: 479.9px) {
+      right: 15px;
+    }
+  }
 
   @media screen and (min-width: 768px) {
     display: none;
